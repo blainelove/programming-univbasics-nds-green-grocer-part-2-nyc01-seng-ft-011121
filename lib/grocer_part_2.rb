@@ -47,22 +47,16 @@ end
 
 
 def checkout(cart, coupons)
-  binding.pry
   total = 0
   conCart = consolidate_cart(cart)
-  binding.pry
   coupCart = apply_coupons(conCart, coupons)
-  binding.pry
   apply_clearance(coupCart)
-  binding.pry
   coupCart.each do |product|
     total += product[:price] * product[:count]
   end
   if total > 100
-    binding.pry
     total = total * 0.90
   end
-  binding.pry
   return total.round(2)
 end
 
