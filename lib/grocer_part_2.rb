@@ -22,7 +22,7 @@ def apply_coupons(cart, coupons)
         receipt << couponItemHash
         # binding.pry
         # binding.pry
-      end  
+      end
     end
     receipt << product
   end
@@ -38,7 +38,7 @@ end
 
 def apply_clearance(cart)
   cart.each do |product|
-    product[:price] = product[:price] * 0.80 if product[:clearance]
+    product[:price] = (product[:price] * 0.80 if product[:clearance]).round
   end
 end
   # Consult README for inputs and outputs
