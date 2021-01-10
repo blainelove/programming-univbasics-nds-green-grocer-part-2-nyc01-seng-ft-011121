@@ -22,10 +22,11 @@ def apply_coupons(cart, coupons)
                          :count => qty - remain}
         receipt << couponItemHash
         binding.pry
-      else
-        receipt << product
+
+
         binding.pry
       end
+      receipt << product
     end
   end
   return receipt
