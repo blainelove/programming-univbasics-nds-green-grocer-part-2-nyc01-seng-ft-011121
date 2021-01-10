@@ -14,7 +14,6 @@ def apply_coupons(cart, coupons)
         remain = product[:count] % discounted[:num]
 
         product[:count] = remain
-        receipt << product
         binding.pry
         couponItemHash = {:item => product[:item] + ' W/COUPON',
                          :price => discounted[:cost] / discounted[:num],
