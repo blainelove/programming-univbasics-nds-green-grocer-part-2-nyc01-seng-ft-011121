@@ -38,7 +38,7 @@ end
 
 def apply_clearance(cart)
   cart.each do |product|
-    product[:price] = (product[:price] * 0.80 if product[:clearance]).round(2)
+    product[:price] = product[:price] * 0.80 if product[:clearance]
   end
 end
   # Consult README for inputs and outputs
@@ -63,7 +63,7 @@ def checkout(cart, coupons)
     total = total * 0.90
   end
   binding.pry
-  return total
+  return total.round(2)
 end
 
 
