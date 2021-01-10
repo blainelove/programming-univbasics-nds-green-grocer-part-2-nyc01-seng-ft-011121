@@ -24,6 +24,7 @@ def apply_coupons(cart, coupons)
         binding.pry
       else
         receipt << product
+        binding.pry
       end
     end
   end
