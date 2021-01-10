@@ -2,7 +2,7 @@ require_relative './part_1_solution.rb'
 require 'pry'
 
 def apply_coupons(cart, coupons)
-  binding.pry
+  # binding.pry
   receipt = []
   if coupons == []
     return cart
@@ -14,16 +14,16 @@ def apply_coupons(cart, coupons)
         remain = product[:count] % discounted[:num]
 
         product[:count] = remain
-        binding.pry
+        # binding.pry
         couponItemHash = {:item => product[:item] + ' W/COUPON',
                          :price => discounted[:cost] / discounted[:num],
                          :clearance => product[:clearance],
                          :count => qty - remain}
         receipt << couponItemHash
-        binding.pry
+        # binding.pry
 
 
-        binding.pry
+        # binding.pry
       end
       receipt << product
     end
